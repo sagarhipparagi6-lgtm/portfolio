@@ -1,0 +1,166 @@
+.home {
+  &__container {
+    padding-left: 7rem;
+    padding-right: 7rem;
+    padding-top: 4rem;
+    color: #fbfbfb;
+    min-height: 100vh;
+    background-image: linear-gradient(
+                    to bottom right,
+                    #020617, /* slate-950 */
+                    #0f172a, /* slate-900 */
+                    #020617  /* slate-950 */
+    );
+
+    &-contact-details {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    &-header {
+      &-container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 2rem;
+      }
+      &-content {
+        align-items: flex-start;
+        h1 {
+          font-size: 3rem; // text-5xl (48px)
+          line-height: 1;
+          margin-bottom: 1.5rem; // mb-6 (24px)
+          font-weight: 700; // Bold (usually implied with 5xl+)
+
+          // Responsive Breakpoints
+          @media (min-width: 768px) {
+            font-size: 3.75rem; // md:text-6xl (60px)
+          }
+
+          @media (min-width: 1024px) {
+            font-size: 4.5rem; // lg:text-7xl (72px)
+          }
+
+          // The Gradient Text Effect
+          background: linear-gradient(to right, #ffffff, #e2e8f0, #94a3b8); // from-white via-slate-200 to-slate-400
+          -webkit-background-clip: text; // bg-clip-text
+          background-clip: text;
+          color: transparent; // text-transparent
+        }
+        h2 {
+          font-size: 1.5rem;      /* text-2xl (24px) */
+          line-height: 2rem;
+          margin-bottom: 1.5rem;  /* mb-6 (24px) */
+          color: #2dd4bf;         /* text-teal-400 */
+
+          @media (min-width: 768px) {
+            font-size: 1.875rem;  /* md:text-3xl (30px) */
+            line-height: 2.25rem;
+          }
+        }
+
+        p {
+          font-size: 1.25rem;    /* text-xl (20px) */
+          color: #94a3b8;        /* text-slate-400 */
+          margin-bottom: 2rem;   /* mb-8 (32px) */
+        }
+      }
+    }
+
+    &-card {
+      background-color: rgba(30, 41, 59, 0.3); // bg-slate-800/30 (30% opacity)
+      backdrop-filter: blur(4px);              // backdrop-blur-sm
+      border: 1px solid rgba(51, 65, 85, 0.5); // border-slate-700/50 (50% opacity)
+      border-radius: 1rem;                     // rounded-2xl (16px)
+      padding: 2rem;                           // p-8 (32px)
+      margin-bottom: 3rem;                     // mb-12 (48px)
+
+      // Necessary for some browsers to render backdrop-filter correctly
+      -webkit-backdrop-filter: blur(4px);
+
+      h2 {
+        font-size: 1.5rem;      /* text-2xl (24px) */
+        color: #ffffff;         /* text-white */
+        margin-bottom: 0.5rem;  /* mb-2 (8px) */
+        font-weight: 600;
+      }
+
+      h3 {
+        font-size: 1.25rem;    /* text-xl (20px) */
+        color: #2dd4bf;        /* text-teal-400 */
+        margin-bottom: 0.5rem; /* mb-2 (8px) */
+        font-weight: 600;
+      }
+      h4 {
+        font-size: 1.125rem;  // text-lg (18px)
+        line-height: 1.75rem; // standard line-height for text-lg
+        color: #ffffff;       // text-white
+        margin-bottom: 0.75rem;
+      }
+    }
+    &-tag {
+      &-container {
+        display: flex;       // flex
+        flex-wrap: wrap;     // flex-wrap
+        gap: 0.5rem;
+      }
+      &-content {
+        padding: 0.25rem 0.75rem;     /* py-1 px-3 (4px 12px) */
+        background-color: rgba(51, 65, 85, 0.5); /* bg-slate-700/50 (50% opacity) */
+        color: #cbd5e1;               /* text-slate-300 */
+        border-radius: 0.5rem;        /* rounded-lg (8px) */
+        font-size: 0.75rem;           /* text-xs (12px) */
+        display: inline-block;        /* Ensures padding works correctly */
+        font-weight: 500;
+      }
+    }
+    &-achievements {
+      display: grid;
+      grid-template-columns: repeat(3, 2fr);
+      gap: 20px;
+
+      &-tagContainer {
+        display: flex;                // flex
+        align-items: flex-start;      // items-start
+        justify-content: space-between; // justify-between
+        margin-bottom: 1rem;
+      }
+
+      &-tag {
+        // Padding & Font (px-3 py-1, text-xs)
+        padding: 0.25rem 0.75rem;
+        font-size: 0.75rem;
+        line-height: 1rem;
+
+        // Colors (bg-teal-500/10, text-teal-400)
+        // rgba is used to achieve the /10 and /20 opacity
+        background-color: rgba(20, 184, 166, 0.1);
+        color: #2dd4bf;
+
+        // Border (border border-teal-500/20)
+        border: 1px solid rgba(20, 184, 166, 0.2);
+
+        // Shape (rounded-full)
+        border-radius: 9999px;
+
+        // Alignment
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+      }
+
+      &-layer {
+        width: 2rem;
+        height: 2rem;
+        color: #2dd4bf;
+
+        //// If this is for an SVG icon
+        //display: inline-block;
+        //vertical-align: middle;
+      }
+    }
+  }
+}
